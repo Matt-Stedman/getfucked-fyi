@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/getfucked-fyi/static/css/main.f87db60f.css",
+    "main.js": "/getfucked-fyi/static/js/main.0393264d.js",
+    "static/js/787.2dc4bfe2.chunk.js": "/getfucked-fyi/static/js/787.2dc4bfe2.chunk.js",
+    "index.html": "/getfucked-fyi/index.html",
+    "main.f87db60f.css.map": "/getfucked-fyi/static/css/main.f87db60f.css.map",
+    "main.0393264d.js.map": "/getfucked-fyi/static/js/main.0393264d.js.map",
+    "787.2dc4bfe2.chunk.js.map": "/getfucked-fyi/static/js/787.2dc4bfe2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f87db60f.css",
+    "static/js/main.0393264d.js"
+  ]
+}
