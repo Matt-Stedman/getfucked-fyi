@@ -2,6 +2,7 @@ import './App.css';
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import img_gif from "./gf.gif"
+import Settings from './Settings';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         </p>
         <img src={img_gif} alt="No seriously, get fucked."/>
       </header>
+      <Settings/>
     </div>
   );
 }
