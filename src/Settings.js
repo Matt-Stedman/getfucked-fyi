@@ -1,29 +1,34 @@
 import React, { useState } from 'react'
+import Box from '@mui/material/Box';
+import Grow from '@mui/material/Grow';
 import img from "./Settings.png"
-import './App.css';
+import img_collapsed from "./Settings_collapsed.png"
 
-
-function Settings() {
+export default function Settings() {
   const size_h = 64
   const [isShown, setIsShown] = useState(false)
-
+  const [checked, setChecked] = React.useState(false);
   let url = window.location.href
   const [name, setName] = useState("")
   const onChange = (e) => {
     setName(e.target.value);
   };
-  console.log(name)
-
   const getUrl = () => {
-
     const new_url = url + '?name=' + name;
-    navigator.clipboard.writeText(this.state.textToCopy)
+    navigator.clipboard.writeText(new_url)
+    console.log("Copied to clipboard.")
+    setChecked(false);
   }
+  const handleChange = () => {
+    setChecked((prev) => !prev);
+  };
 
   return (
-    <>
-      <div style={isShown ? { position: "fixed", right: "90px", bottom: "90px", padding: "10px", backgroundColor: "white", borderRadius: "10px" } : { display: "none" }} >
-        <div>
+    <Box sx={{}}>
+
+      <img src={checked ? img_collapsed : img} onClick={handleChange} height={size_h} width={size_h} style={{ position: 'fixed', bottom: "18px", right: "90px", cursor: "pointer" }} alt="Settings button" />
+      <Grow direction="up" in={checked} mountOnEnter unmountOnExit>
+        <div style={{ position: "fixed", right: "90px", bottom: "100px", padding: "10px", backgroundColor: "white", borderRadius: "10px" }} >
           <text>Who should get fucked? </text><br /><br />
           <input
             type="text"
@@ -33,17 +38,16 @@ function Settings() {
             onChange={onChange}
           />
           <button style={{
-            background: "#e7e7e7",
+            background: "#A7EBCA",
+            color: "white",
             border: "none",
             padding: "5px 8px",
             borderRadius: "5px",
-            marginTop: 5
+            marginTop: 5,
+            cursor: "pointer"
           }} onClick={() => getUrl()}>Copy</button>
         </div>
-      </div>
-        <img src={img} height={size_h} width={size_h} onClick={() => setIsShown(!isShown)} style={{ position: 'fixed', bottom: "18px", right: "90px" }} alt="Settings button" />
-    </>
-  )
+      </Grow>
+    </Box>
+  );
 }
-
-export default Settings
