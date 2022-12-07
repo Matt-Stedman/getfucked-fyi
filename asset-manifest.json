@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/getfucked-fyi/static/css/main.4c91169b.css",
-    "main.js": "/getfucked-fyi/static/js/main.87aedd31.js",
+    "main.js": "/getfucked-fyi/static/js/main.a6f217c5.js",
     "static/js/787.2dc4bfe2.chunk.js": "/getfucked-fyi/static/js/787.2dc4bfe2.chunk.js",
     "static/media/gf.gif": "/getfucked-fyi/static/media/gf.0275dfccff58ee684ac1.gif",
     "index.html": "/getfucked-fyi/index.html",
     "main.4c91169b.css.map": "/getfucked-fyi/static/css/main.4c91169b.css.map",
-    "main.87aedd31.js.map": "/getfucked-fyi/static/js/main.87aedd31.js.map",
+    "main.a6f217c5.js.map": "/getfucked-fyi/static/js/main.a6f217c5.js.map",
     "787.2dc4bfe2.chunk.js.map": "/getfucked-fyi/static/js/787.2dc4bfe2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4c91169b.css",
-    "static/js/main.87aedd31.js"
+    "static/js/main.a6f217c5.js"
   ]
 }
