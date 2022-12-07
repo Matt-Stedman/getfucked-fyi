@@ -13,11 +13,17 @@ export default function Settings() {
   const onChange = (e) => {
     setName(e.target.value);
   };
-  const getUrl = () => {
-    const new_url = url + '?name=' + name;
-    navigator.clipboard.writeText(new_url)
-    console.log("Copied to clipboard.")
+  const getUrl = (open = false) => {
+    const new_url = url.split("?name=")[0] + '?name=' + name;
+    if (open) {
+      window.open(new_url)
+      console.log("Copied to clipboard.")
+    } else {
+      navigator.clipboard.writeText(new_url)
+      console.log("Copied to clipboard.")
+    }
     setChecked(false);
+
   }
   const handleChange = () => {
     setChecked((prev) => !prev);
@@ -43,7 +49,16 @@ export default function Settings() {
             border: "none",
             padding: "5px 8px",
             borderRadius: "5px",
-            marginTop: 5,
+            margin: 5,
+            cursor: "pointer"
+          }} onClick={() => getUrl(true)}>Open</button>
+          <button style={{
+            background: "#A7EBCA",
+            color: "white",
+            border: "none",
+            padding: "5px 8px",
+            borderRadius: "5px",
+            margin: 5,
             cursor: "pointer"
           }} onClick={() => getUrl()}>Copy</button>
         </div>
